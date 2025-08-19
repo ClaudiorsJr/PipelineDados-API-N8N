@@ -17,14 +17,11 @@ def get_commodities_df():
             df_commodities = df_commodities.rename(columns = {'Close': 'preco'})
             df_commodities['ativo'] = ticker
             df_commodities['moeda'] = 'USD'
-            df_commodities['data_coleta'] = datetime.now()
-            df_commodities = df_commodities[['ativo', 'preco', 'moeda', 'data_coleta']]
+            df_commodities['horario_coleta'] = datetime.now()
+            df_commodities = df_commodities[['ativo', 'moeda', 'preco', 'horario_coleta']]
             dfs.append(df_commodities)
         return pd.concat(dfs, ignore_index=True)
     
     except Exception as e:
         print(f"Erro ao obter as commodities: {e}")
         return None
-    
-
-print(get_commodities_df())

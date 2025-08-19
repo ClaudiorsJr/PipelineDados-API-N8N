@@ -29,6 +29,3 @@ def get_bitcoin_df():
     })
 
     return df
-
-
-
