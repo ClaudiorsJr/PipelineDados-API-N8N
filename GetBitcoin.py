@@ -2,7 +2,7 @@ import requests
 import pandas as pd
 from datetime import datetime
 
-def coletar_precos_bitcoin():
+def get_bitcoin_df():
 
     """Coleta o preço atual do Bitcoin em dólares americanos (USD) da API Coinbase."""
 
